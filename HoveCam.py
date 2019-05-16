@@ -1,12 +1,11 @@
 #!/usr/bin/env python
-import sys
+import os
 from twython import Twython
+from config import CONSUMER_KEY, CONSUMER_SECRET, ACCESS_KEY, ACCESS_SECRET
 
-CONSUMER_KEY = ''
-CONSUMER_SECRET = ''
-ACCESS_KEY = ''
-ACCESS_SECRET = ''
+api = Twython(CONSUMER_KEY, CONSUMER_SECRET,ACCESS_KEY,ACCESS_SECRET)
 
-api = Twyton(CONSUMER_KEY, CONSUMER_SECRET,ACCESS_KEY,ACCESS_SECRET)
-
-api.update_status(status=sys.argv[1])
+cmd = '/opt/vc/bin/vcgencmd measure_temp'
+line = os.popen(cmd).readline().strip()
+temp = line.split('=')[1].split("'")[0]
+api.update_status(status='CPU temp is '+temp+'C')
