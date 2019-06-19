@@ -1,0 +1,18 @@
+[0;1;32m●[0m cron.service - Regular background program processing daemon
+   Loaded: loaded (/lib/systemd/system/cron.service; enabled; vendor preset: enabled)
+   Active: [0;1;32mactive (running)[0m since Wed 2019-05-15 23:02:15 BST; 12h ago
+     Docs: man:cron(8)
+ Main PID: 265 (cron)
+   CGroup: /system.slice/cron.service
+           └─265 /usr/sbin/cron -f
+
+May 16 11:36:12 raspberrypi CRON[3038]: (CRON) info (No MTA installed, discarding output)
+May 16 11:36:12 raspberrypi CRON[3038]: pam_unix(cron:session): session closed for user root
+May 16 11:37:01 raspberrypi CRON[3070]: pam_unix(cron:session): session opened for user root by (uid=0)
+May 16 11:37:01 raspberrypi CRON[3074]: (root) CMD (python /home/pi/hovecam/HoveCam.py)
+May 16 11:37:15 raspberrypi CRON[3070]: (CRON) info (No MTA installed, discarding output)
+May 16 11:37:15 raspberrypi CRON[3070]: pam_unix(cron:session): session closed for user root
+May 16 11:38:01 raspberrypi CRON[3115]: pam_unix(cron:session): session opened for user root by (uid=0)
+May 16 11:38:01 raspberrypi CRON[3119]: (root) CMD (python /home/pi/hovecam/HoveCam.py)
+May 16 11:38:12 raspberrypi CRON[3115]: (CRON) info (No MTA installed, discarding output)
+May 16 11:38:12 raspberrypi CRON[3115]: pam_unix(cron:session): session closed for user root
